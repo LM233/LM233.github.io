@@ -94,11 +94,11 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="范畴1-snapshot-快照"><a href="#范畴1-snapshot-快照" class="headerlink" title="范畴1. snapshot - 快照"></a>范畴1. snapshot - 快照</h2><ul>
-<li>git与其他的版本控制软件的不同之处在于，git并不是只储存版本间差异，git储存了所有文件（如下图所示）。<br><img src="./20220122-1/deltas.png"><br><img src="./20220122-1/snapshots.png"></li>
+<li>git与其他的版本控制软件的不同之处在于，git并不是只储存版本间差异，git储存了所有文件（如下图所示）。<br><img src="/2022/01/22/20220122-1/deltas.png"><br><img src="/2022/01/22/20220122-1/snapshots.png"></li>
 <li>每当提交一次git commit时，git生成一个commit对象（下图白色）。这个commit对象指向一个快照对象（下图蓝色）。  </li>
-<li>快照对象实际上就是代表了当前文件目录的树结构，并分别指向了若干blob对象。而blob对象就是储存的文件。<br><img src="./20220122-1/commit-and-tree.png"><h2 id="范畴2-branch-分支"><a href="#范畴2-branch-分支" class="headerlink" title="范畴2. branch - 分支"></a>范畴2. branch - 分支</h2></li>
+<li>快照对象实际上就是代表了当前文件目录的树结构，并分别指向了若干blob对象。而blob对象就是储存的文件。<br><img src="/2022/01/22/20220122-1/commit-and-tree.png"><h2 id="范畴2-branch-分支"><a href="#范畴2-branch-分支" class="headerlink" title="范畴2. branch - 分支"></a>范畴2. branch - 分支</h2></li>
 <li>分支事实上就是指向commit对象的指针。</li>
-<li>创建分支就是在当前commit对象上创建一个新指针。<br><img src="./20220122-1/two-branches.png"></li>
+<li>创建分支就是在当前commit对象上创建一个新指针。<br><img src="/2022/01/22/20220122-1/two-branches.png"></li>
 </ul>
 
       
