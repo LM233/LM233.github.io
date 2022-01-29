@@ -4,26 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Understanding Git (1) | 理性作用于可认识之物</title>
+  <title>Git使用事故(1) | 理性作用于可认识之物</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="范畴1. snapshot - 快照 git与其他的版本控制软件的不同之处在于，git并不是只储存版本间差异，git储存了所有文件（如下图所示）。 每当提交一次git commit时，git生成一个commit对象（下图白色）。这个commit对象指向一个快照对象（下图蓝色）。   快照对象实际上就是代表了当前文件目录的树结构，并分别指向了若干blob对象。而blob对象就是储存的文件。范畴2.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Understanding Git (1)">
-<meta property="og:url" content="https://lm233.github.io/2022/01/22/20220122-1/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Git使用事故(1)">
+<meta property="og:url" content="https://lm233.github.io/2022/01/29/20220129-1/index.html">
 <meta property="og:site_name" content="理性作用于可认识之物">
-<meta property="og:description" content="范畴1. snapshot - 快照 git与其他的版本控制软件的不同之处在于，git并不是只储存版本间差异，git储存了所有文件（如下图所示）。 每当提交一次git commit时，git生成一个commit对象（下图白色）。这个commit对象指向一个快照对象（下图蓝色）。   快照对象实际上就是代表了当前文件目录的树结构，并分别指向了若干blob对象。而blob对象就是储存的文件。范畴2.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://lm233.github.io/2022/01/22/20220122-1/deltas.png">
-<meta property="og:image" content="https://lm233.github.io/2022/01/22/20220122-1/snapshots.png">
-<meta property="og:image" content="https://lm233.github.io/2022/01/22/20220122-1/commit-and-tree.png">
-<meta property="og:image" content="https://lm233.github.io/2022/01/22/20220122-1/two-branches.png">
-<meta property="article:published_time" content="2022-01-23T03:54:00.000Z">
-<meta property="article:modified_time" content="2022-01-24T15:58:39.551Z">
+<meta property="og:image" content="https://lm233.github.io/2022/01/29/20220129-1/20220129-1.png">
+<meta property="article:published_time" content="2022-01-29T22:00:57.000Z">
+<meta property="article:modified_time" content="2022-01-29T22:03:03.854Z">
 <meta property="article:author" content="冬">
 <meta property="article:tag" content="计算机">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lm233.github.io/2022/01/22/20220122-1/deltas.png">
+<meta name="twitter:image" content="https://lm233.github.io/2022/01/29/20220129-1/20220129-1.png">
   
     <link rel="alternate" href="/atom.xml" title="理性作用于可认识之物" type="application/atom+xml">
   
@@ -80,10 +75,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-20220122-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-20220129-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/01/22/20220122-1/" class="article-date">
-  <time class="dt-published" datetime="2022-01-23T03:54:00.000Z" itemprop="datePublished">2022-01-22</time>
+    <a href="/2022/01/29/20220129-1/" class="article-date">
+  <time class="dt-published" datetime="2022-01-29T22:00:57.000Z" itemprop="datePublished">2022-01-29</time>
 </a>
     
   </div>
@@ -94,7 +89,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Understanding Git (1)
+      Git使用事故(1)
     </h1>
   
 
@@ -102,18 +97,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="范畴1-snapshot-快照"><a href="#范畴1-snapshot-快照" class="headerlink" title="范畴1. snapshot - 快照"></a>范畴1. snapshot - 快照</h2><ul>
-<li>git与其他的版本控制软件的不同之处在于，git并不是只储存版本间差异，git储存了所有文件（如下图所示）。<br/><br><img src="/2022/01/22/20220122-1/deltas.png"><br><img src="/2022/01/22/20220122-1/snapshots.png"><br/></li>
-<li>每当提交一次git commit时，git生成一个commit对象（下图白色）。这个commit对象指向一个快照对象（下图蓝色）。  </li>
-<li>快照对象实际上就是代表了当前文件目录的树结构，并分别指向了若干blob对象。而blob对象就是储存的文件。<br/><br><img src="/2022/01/22/20220122-1/commit-and-tree.png"><br/><h2 id="范畴2-branch-分支"><a href="#范畴2-branch-分支" class="headerlink" title="范畴2. branch - 分支"></a>范畴2. branch - 分支</h2></li>
-<li>分支事实上就是指向commit对象的指针。</li>
-<li>创建分支就是在当前commit对象上创建一个新指针。<br/><br><img src="/2022/01/22/20220122-1/two-branches.png"></li>
-</ul>
+        <p><img src="/2022/01/29/20220129-1/20220129-1.png"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lm233.github.io/2022/01/22/20220122-1/" data-id="ckyqra1qf0000oaonfkfjfcac" data-title="Understanding Git (1)" class="article-share-link">Share</a>
+      <a data-url="https://lm233.github.io/2022/01/29/20220129-1/" data-id="ckz0drro90000z7ww1qtzcbnr" data-title="Git使用事故(1)" class="article-share-link">Share</a>
       
       
       
@@ -125,19 +114,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/01/29/20220129-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Git使用事故(1)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/01/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/01/22/20220122-1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Understanding Git (1)</div>
     </a>
   
 </nav>

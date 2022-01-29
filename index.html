@@ -71,6 +71,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-20220129-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/01/29/20220129-1/" class="article-date">
+  <time class="dt-published" datetime="2022-01-29T22:00:57.000Z" itemprop="datePublished">2022-01-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/01/29/20220129-1/">Git使用事故(1)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/2022/01/29/20220129-1/20220129-1.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lm233.github.io/2022/01/29/20220129-1/" data-id="ckz0drro90000z7ww1qtzcbnr" data-title="Git使用事故(1)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-20220122-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/01/22/20220122-1/" class="article-date">
@@ -94,11 +135,11 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="范畴1-snapshot-快照"><a href="#范畴1-snapshot-快照" class="headerlink" title="范畴1. snapshot - 快照"></a>范畴1. snapshot - 快照</h2><ul>
-<li>git与其他的版本控制软件的不同之处在于，git并不是只储存版本间差异，git储存了所有文件（如下图所示）。<br><img src="/2022/01/22/20220122-1/deltas.png"><br><img src="/2022/01/22/20220122-1/snapshots.png"></li>
+<li>git与其他的版本控制软件的不同之处在于，git并不是只储存版本间差异，git储存了所有文件（如下图所示）。<br/><br><img src="/2022/01/22/20220122-1/deltas.png"><br><img src="/2022/01/22/20220122-1/snapshots.png"><br/></li>
 <li>每当提交一次git commit时，git生成一个commit对象（下图白色）。这个commit对象指向一个快照对象（下图蓝色）。  </li>
-<li>快照对象实际上就是代表了当前文件目录的树结构，并分别指向了若干blob对象。而blob对象就是储存的文件。<br><img src="/2022/01/22/20220122-1/commit-and-tree.png"><h2 id="范畴2-branch-分支"><a href="#范畴2-branch-分支" class="headerlink" title="范畴2. branch - 分支"></a>范畴2. branch - 分支</h2></li>
+<li>快照对象实际上就是代表了当前文件目录的树结构，并分别指向了若干blob对象。而blob对象就是储存的文件。<br/><br><img src="/2022/01/22/20220122-1/commit-and-tree.png"><br/><h2 id="范畴2-branch-分支"><a href="#范畴2-branch-分支" class="headerlink" title="范畴2. branch - 分支"></a>范畴2. branch - 分支</h2></li>
 <li>分支事实上就是指向commit对象的指针。</li>
-<li>创建分支就是在当前commit对象上创建一个新指针。<br><img src="/2022/01/22/20220122-1/two-branches.png"></li>
+<li>创建分支就是在当前commit对象上创建一个新指针。<br/><br><img src="/2022/01/22/20220122-1/two-branches.png"></li>
 </ul>
 
       
@@ -212,6 +253,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/01/29/20220129-1/">Git使用事故(1)</a>
+          </li>
         
           <li>
             <a href="/2022/01/22/20220122-1/">Understanding Git (1)</a>
